@@ -1,0 +1,9 @@
+name: core-ext
+version: 0.1.2
+
+authors:
+  - maiha <maiha@wota.jp>
+
+crystal: 0.20.1
+
+license: MIT
