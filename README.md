@@ -6,25 +6,54 @@ Personal but versatile core class extensions for [Crystal](http://crystal-lang.o
 
 ## API
 
-- Enumerable#grep(T)   : Array(T)
-- String#first?(Regex) : String?
-- String?#any?         : Bool
+- Enumerable#grep(T)       : Array(T)
+- String#first?(Regex)     : String?
+- String?#any?             : Bool
+- Time.parse(String)       : Time
+- Time::Span.parse(String) : Time::Span
 
 ## Usage
 
-
 ```crystal
 require "core-ext"
+```
 
+#### Enumerable#grep(T)
+
+```crystal
 a = [1, nil, "a"]  # Array(Int32 | String | Nil)
 a.grep(String)     # => ["a"] (Array(String))
+```
 
+#### String#first?(Regex)
+
+```crystal
 "a:12".first?(/(\d+)/)  # => "12"
+```
 
+#### String?#any?
+
+```crystal
 nil.any?           # => false
 "".any?            # => false
 " ".any?           # => true
-if e.message.any?  # String?#any?
+```
+
+#### Time.parse(String)
+
+```crystal
+Time.parse("2001-02-03")              # => 2001-02-03 00:00:00
+Time.parse("2001-02-03 04:05:06")     # => 2001-02-03 04:05:06
+Time.parse("2001-02-03 04:05:06 UTC") # => 2001-02-03 04:05:06 UTC
+Time.parse("2001-02-03 04:05:06.789") # => 2001-02-03 04:05:06.789
+```
+
+#### Time::Span.parse(String)
+
+```crystal
+Time::Span.parse("01:02:03")       # => Time::Span.new(1, 2, 3)
+Time::Span.parse("5.01:02:03")     # => Time::Span.new(5, 1, 2, 3)
+Time::Span.parse("5.01:02:03.010") # => Time::Span.new(5, 1, 2, 3, 10)
 ```
 
 ## Installation
