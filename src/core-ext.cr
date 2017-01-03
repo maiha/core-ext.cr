@@ -1,1 +1,1 @@
-require "./core-ext/*"
+require "./core-ext/**"
