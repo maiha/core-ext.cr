@@ -2,7 +2,7 @@
 
 Personal but versatile core class extensions for [Crystal](http://crystal-lang.org/).
 
-- crystal: 0.20.3
+- crystal: 0.20.4
 
 ## API
 
@@ -65,7 +65,7 @@ Add this to your application's `shard.yml`:
 dependencies:
   core-ext:
     github: maiha/core-ext.cr
-    version: 0.1.3
+    version: 0.2.0
 ```
 
 ## Development
