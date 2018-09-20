@@ -5,7 +5,7 @@ Personal but versatile core class extensions for [Crystal](http://crystal-lang.o
 - crystal: 0.26.1
 
 #### BREAKING CHANGES
-- 0.2.0: Removed `Time.parse(String)`, use `pretty.cr`
+- 0.3.0: Removed `Time.parse(String)`, use `pretty.cr`
 
 ## API
 
@@ -58,7 +58,7 @@ Add this to your application's `shard.yml`:
 dependencies:
   core-ext:
     github: maiha/core-ext.cr
-    version: 0.1.3
+    version: 0.3.0
 ```
 
 ## Development
