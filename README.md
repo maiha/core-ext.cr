@@ -2,14 +2,16 @@
 
 Personal but versatile core class extensions for [Crystal](http://crystal-lang.org/).
 
-- crystal: 0.20.3
+- crystal: 0.26.1
+
+#### BREAKING CHANGES
+- 0.2.0: Removed `Time.parse(String)`, use `pretty.cr`
 
 ## API
 
 - Enumerable#grep(T)       : Array(T)
 - String#first?(Regex)     : String?
 - String?#any?             : Bool
-- Time.parse(String)       : Time
 - Time::Span.parse(String) : Time::Span
 
 ## Usage
@@ -37,15 +39,6 @@ a.grep(String)     # => ["a"] (Array(String))
 nil.any?           # => false
 "".any?            # => false
 " ".any?           # => true
-```
-
-#### Time.parse(String)
-
-```crystal
-Time.parse("2001-02-03")              # => 2001-02-03 00:00:00
-Time.parse("2001-02-03 04:05:06")     # => 2001-02-03 04:05:06
-Time.parse("2001-02-03 04:05:06 UTC") # => 2001-02-03 04:05:06 UTC
-Time.parse("2001-02-03 04:05:06.789") # => 2001-02-03 04:05:06.789
 ```
 
 #### Time::Span.parse(String)

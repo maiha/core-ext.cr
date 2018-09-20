@@ -4,6 +4,4 @@ version: 0.1.3
 authors:
   - maiha <maiha@wota.jp>
 
-crystal: 0.20.3
-
 license: MIT
